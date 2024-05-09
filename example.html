@@ -48,8 +48,21 @@
         <h6>This is level six heading.</h6>
         -->
 
-        <input class="styled" type="button" value="Click Me!" />
+        <input id="brownbutton" type="button" style="background-color: brown" value="Click Me!" />
 
+        <script>
+            "use strict";
+            const my_button = document.getElementById("brownbutton");
+            function recolorButton(enter = true) {
+                if (enter) {
+                    my_button.style.backgroundColor = "red";
+            }   else {
+                    my_button.style.backgroundColor = "brown"
+            } }
+            my_button.addEventListener('mouseenter', recolorButton);
+            my_button.addEventListener('mouseleave', () => recolorButton(false));
+
+        </script>
 
         <fieldset style="margin-top:20px; margin-left:50px; width:300px;">
         <legend>Choose your guitar:</legend>
